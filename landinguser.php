@@ -34,7 +34,7 @@ $PAGE->set_pagelayout('standard');
 $PAGE->navbar->add(get_string('landinguser:pagetitle', 'local_webuntis'), $PAGE->url);
 $PAGE->requires->css('/local/webuntis/style/main.css');
 
-if (\local_webuntis\locallib::in_iframe()) {
+if (\local_webuntis\locallib::in_iframe() AND get_config('local_webuntis', 'landingexternal')) {
     $url = new \moodle_url('/local/webuntis/landingexternal.php', [ 'url' => $PAGE->url]);
     redirect($url);
 }
