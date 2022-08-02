@@ -80,7 +80,7 @@ if ($hassiteconfig) {
 
         $settings->add(
             new admin_setting_configcheckbox(
-                'local_webuntis/iframeredirection',
+                'local_webuntis/landingexternal',
                 $name,
                 $desc,
                 $default
