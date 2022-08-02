@@ -74,21 +74,16 @@ if ($hassiteconfig) {
             )
         );
         
-        $name = new lang_string('admin:iframeredirection', 'local_webuntis');
-        $desc = new lang_string('admin:iframeredirection:description', 'local_webuntis');
-        $options = [
-            0 => new lang_string('admin:iframeredirection:disable', 'local_webuntis'),
-            1 => new lang_string('admin:iframeredirection:enable', 'local_webuntis')
-        ];
+        $name = new lang_string('admin:landingexternal', 'local_webuntis');
+        $desc = new lang_string('admin:landingexternal:description', 'local_webuntis');
         $default = 1;
 
         $settings->add(
-            new admin_setting_configselect(
+            new admin_setting_configcheckbox(
                 'local_webuntis/iframeredirection',
                 $name,
                 $desc,
-                $default,
-                $options
+                $default
             )
         );
 
