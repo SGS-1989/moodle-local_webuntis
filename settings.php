@@ -73,6 +73,24 @@ if ($hassiteconfig) {
                 $options
             )
         );
+        
+        $name = new lang_string('admin:iframeredirection', 'local_webuntis');
+        $desc = new lang_string('admin:iframeredirection:description', 'local_webuntis');
+        $options = [
+            0 => new lang_string('admin:iframeredirection:disable', 'local_webuntis'),
+            1 => new lang_string('admin:iframeredirection:enable', 'local_webuntis')
+        ];
+        $default = 1;
+
+        $settings->add(
+            new admin_setting_configselect(
+                'local_webuntis/iframeredirection',
+                $name,
+                $desc,
+                $default,
+                $options
+            )
+        );
 
         $name = new lang_string('admin:pubkey:integration', 'local_webuntis');
         $desc = new lang_string('admin:pubkey:integration:description', 'local_webuntis');
